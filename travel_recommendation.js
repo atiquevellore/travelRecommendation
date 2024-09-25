@@ -52,3 +52,16 @@ async function getRecommendationsList(givenstring) {
       console.log("Error message", error.message);
   }
 }
+
+document.getElementById("clear").addEventListener('click',function(event){
+  event.preventDefault();
+  clearRecommendations();
+});
+
+function clearRecommendations(){
+  console.log("clear clicked")
+  const searchtext = document.getElementById('searchtext')
+  searchtext.value = ''
+  const resultsContainer = document.getElementById('results');
+  resultsContainer.innerHTML = '';
+}
